@@ -3,36 +3,38 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.1.0",
-    "react-dom": "^16.1.0",
-    "react-redux": "^5.0.6",
+    "apollo-cache-inmemory": "^1.1.1",
+    "apollo-client": "^2.0.3",
+    "apollo-link-http": "^1.2.0",
+    "graphql": "^0.11.7",
+    "graphql-tag": "^2.5.0",
+    "react": "^16.0.0",
+    "react-apollo": "^1.4.16",
+    "react-dom": "^16.0.0",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.17",
-    "redux": "^3.7.2",
-    "redux-thunk": "^2.2.0"
+    "react-scripts": "1.0.14"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lint": "prettier 'src/**/*.js' 'src/components/**/*.js --write --single-quote --no--semi && standard --fix'",
+    "lint": "prettier 'src/**/*.js' 'src/components/**/*.js' '*.js' --write --config .prettierrc && standard --fix",
     "precommit": "lint-staged"
   },
   "devDependencies": {
-    "babel-eslint": "^8.0.2",
+    "babel-eslint": "^8.0.1",
     "cross-env": "^5.0.1",
     "husky": "^0.14.3",
     "lint-staged": "^4.0.2",
     "node-fetch": "^1.7.1",
-    "node-sass-chokidar": "^0.0.3",
     "npm-run-all": "^4.0.2",
     "prettier": "^1.5.3",
     "standard": "^10.0.2"
   },
   "lint-staged": {
     "*.js": [
-      "prettie --write --single-quote --no-semi",
+      "prettier --write --single-quote --no-semi",
       "standard --fix",
       "git add"
     ]
