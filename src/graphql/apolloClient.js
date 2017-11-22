@@ -5,7 +5,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 
 
 const client = new ApolloClient({
-  link: createHttpLink({ uri: 'https://learn.wpgraphql.com/graphql' }),
+  link: createHttpLink({ uri: 'https://jesseweigel.com/graphql' }),
   cache: new InMemoryCache(),
 });
 

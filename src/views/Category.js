@@ -4,7 +4,15 @@ import React, { Component } from 'react'
 
 class Category extends Component {
   render () {
-    return [<p key='1'>Category</p>, <p key='2'>This is the category page</p>]
+    return
+    [
+      <p key='1'>
+        Category
+      </p>,
+      <p key='2'>
+        This is the category page
+      </p>
+    ]
   }
 }
 

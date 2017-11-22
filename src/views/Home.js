@@ -5,6 +5,7 @@ import PostPreview from '../components/PostPreview'
 // import { Link } from 'react-router-dom'
 // import '../styles/app.css'
 
+// eslint-disable-next-line
 class Home extends Component {
   render () {
     const posts = this.props.data.posts
@@ -17,7 +18,7 @@ class Home extends Component {
               key={post.node.id}
               id={post.node.id}
               date={post.node.date}
-              imageURL={post.node.featuredImage.sourceUrl}
+              imageURL={post.node.featuredImage && post.node.featuredImage.sourceUrl}
               title={post.node.title}
             />
           ))}
